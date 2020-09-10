@@ -1,0 +1,1 @@
+Using a shell gives you more power to do more tasks more quickly with your computer. Go through the lectures about the [Shell](https://swcarpentry.github.io/shell-novice).
