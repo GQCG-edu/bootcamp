@@ -13,8 +13,8 @@ To showcase your new skills, you are encouraged to complete the three projects b
 
 These projects are based on those provided by Daniel Crawford's group's [Programming Projects](https://github.com/CrawfordGroup/ProgrammingProjects) <sup>[[1]](#footnote1)</sup>. 
 
-1. [Molecular geometry](projects/molecular_geometry/README.md)
-2. [Harmonic vibrational analysis](projects/harmonic_vibrational_analysis/README.md)
-3. [Restricted Hartree-Fock](projects/restricted_hartree_fock/README.md)
+1. [Molecular geometry](molecular-geometry/README.md)
+2. [Harmonic vibrational analysis](harmonic-vibrational-analysis/README.md)
+3. [Restricted Hartree-Fock](restricted-hartree-fock/README.md)
 
 <a name="footnote1">[1]</a> In our capstone project, the focus is on using basic scientific _Python_, but if you are interested in basic scientific C, then Crawford's projects provide an excellent introduction.
