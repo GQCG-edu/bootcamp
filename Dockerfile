@@ -29,5 +29,6 @@ RUN wget \
 RUN conda --version
 
 RUN conda install -c conda-forge numpy scipy matplotlib ipython jupyter pandas sympy nose h5py scikit-learn sympy
+RUN conda install -c psi4 psi4
 
 ENTRYPOINT bash
