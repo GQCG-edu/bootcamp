@@ -4,13 +4,7 @@ on:
   pull_request:
     paths:
       - 'Dockerfile'
-      - '**.hpp'
-      - '**.cpp'
-      - '**.cmake'
-      - '**CMakeLists.txt'
-      - 'cmake/**'
     branches:
-      - 'release/**'
       - 'master'
 
 jobs:
@@ -24,7 +18,7 @@ jobs:
     - name: Build and push the Docker image
       uses:  docker/build-push-action@v1
       with:
-        repository: gqcg/gqcp
+        repository: gqcg/bootcamp
         tags: latest
         registry: docker.io
         dockerfile: Dockerfile

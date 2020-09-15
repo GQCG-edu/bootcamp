@@ -47,16 +47,6 @@ that are not aligned to this Code of Conduct, or to ban temporarily or
 permanently any contributor for other behaviors that they deem inappropriate,
 threatening, offensive, or harmful.
 
-## Code Specific to the GQCG Workspace
-
-As research at GQCG requires a lot of focus, members should not be disturbed needlessly. We use headphones as a informal way of specifying our status:
-
-* no headphones: open for any and all questions
-* headphones over both ears: busy and not available for questions
-
-In order to have the most meaningful discussion, please directly contact members according to the following hierarchy:
-[bachelor-students](https://github.com/orgs/GQCG/teams/bachelor-students) -> [master-students](https://github.com/orgs/GQCG/teams/master-students) -> [junior-phd-candidates](https://github.com/orgs/GQCG/teams/junior-phd-candidates) -> [senior-phd-candidates](https://github.com/orgs/GQCG/teams/senior-phd-candidates) -> [post-docs](https://github.com/orgs/GQCG/teams/post-docs) -> [professors](https://github.com/orgs/GQCG/teams/professors).
-
 ## Scope
 
 This Code of Conduct applies within all project spaces, and it also applies when
