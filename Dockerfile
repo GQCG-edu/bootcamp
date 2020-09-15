@@ -17,6 +17,6 @@ RUN wget \
     && rm -f Miniconda3-latest-Linux-x86_64.sh 
 RUN conda --version
 
-RUN conda install -c conda-forge -c intel -c psi4 numpy scipy matplotlib ipython jupyter pandas sympy nose h5py bokeh scikit-learn sympy tectonic psi4
+RUN conda install -c conda-forge -c intel -c psi4 numpy scipy matplotlib ipython jupyter pandas sympy nose h5py bokeh scikit-learn sympy tectonic psi4 git
 
 ENTRYPOINT bash
