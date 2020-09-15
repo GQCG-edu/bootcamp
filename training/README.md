@@ -54,24 +54,26 @@ Git is a state-of-the-art version control system and using Git with [Github](htt
 
 > Assignment: Fork the `bootcamp` repo and pull your personal fork repo to your local machine. Add your name to the `WALL_OF_FAME` file in a draft PR to the the original `bootcamp` repo. Once you have finished the bootcamp, mark the PR as `ready for review` and assign a team member of GQCG, who will review and close the PR.
 
-### Installing software with environment and Docker
+### Installing software with Docker containers
 
-- Install Docker
-- VSCode extension
+[Docker](https://www.docker.com/) allows us to easily share software and development environments that contain everything you need to finish this bootcamp. After you have [installed Docker](https://www.docker.com/get-started), [play around with Docker](https://www.docker.com/play-with-docker).
 
-### Enhanced scientific communication with LaTeX workshop
+VSCode has [excellent support for Docker](https://code.visualstudio.com/docs/remote/containers-tutorial). After installing the `Remote - Containers` extension in VSCode,  open the folder containing the bootcamp in VSCode and save your workspace. Then, use the [command palette](https://code.visualstudio.com/docs/getstarted/userinterface#:~:text=The%20most%20important%20key%20combination,provides%20access%20to%20many%20commands.) to select `Remote-Containers: Open Workspace in Container`. After selecting the workspace, you can choose the option to start from the existing `Dockerfile`. You can check that all commands in the terminal are now routed through Docker. 
 
-bibtex
+> Assignment: Open an issue in which you add a list of Conda packages installed in the Docker container (`conda list`) and the version of Python you are using (`python --version`). Assign a team member of GQCG, who will review and close the issue.
 
 ### Enhanced data science with Python and Jupyter notebooks
 
+If you have configured VSCode correctly in the steps above, you can run iPython notebooks directly in VSCode. Check this by opening one of the notebooks in the `projects` folder in VSCode. After VSCode has installed all extensions in the Docker container, you should be able to run the iPython notebooks on your local machine.
 
-You can run a local [Jupyter notebook](https://jupyter.org/) by starting your own Jupyter server from the terminal
+> Assignment: Check that you can run [the first notebook of the projects folder](../projects/molecular-geometry/Project1_Molecular_geometry_analysis.ipynb). Note that you are now running this notebook on your local machine and that you have access to all the resources your machine has to offer.
 
-```bash
-    jupyter notebook
-```
+### Enhanced scientific communication with LaTeX workshop
+
+In a similar way, you can install the `LaTeX Workshop` extension (by James Yu) in the Docker container. Through the command palette, you can typeset *.tex documents (`LaTeX Workshop: Build LaTeX project`). You can open the resulting *.pdf in a separate tab (`LaTeX Workshop: View LaTeX PDF file.`).
+
+> Assignment: Make sure you can typeset the [LaTeX test provided](latex/main.tex).
 
 ### Scaling up your research with remote development and the UGent HPC
 
-
+The main reason why we are using Docker is that Docker can be run on any machine you like and will give exactly the same computational environment and results. As such, you could run your notebooks on the machines hosted by the [UGent HPC](https://www.ugent.be/hpc/en), which offer free access to e.g. machines with 32 cores and 177GB RAM memory. Please contact @dariatols if you interested in using those machines.
