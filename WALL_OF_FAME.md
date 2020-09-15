@@ -5,8 +5,10 @@
 This bootcamp, or a previous version thereof, has been completed by:
 - @lelemmen
 - @clanssens
+- @pjschiet
 - @dariatols
 - @xdvriend
+- @evdvelde
 - @jvmeerss
 - @aarondc60
 - @johdvos
