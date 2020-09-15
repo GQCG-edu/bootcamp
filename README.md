@@ -2,7 +2,4 @@
 <img src="media/bootcamp.png" width="400">
 </p>
 
-This boot camp entails the minimal set of computational skills that are required to survive in a computational chemistry group. The capstone projects will allow you to showcase the skills you have learned. Bachelor students usually need around four weeks to pass this boot camp. 
-
-
-
+In this boot camp you will learn the minimal set of computer skills that are required to survive in a computational chemistry group. After working through the [training material](training/README.md) you can showcase your new skills in the [capstone projects](projects/README.md). After the bootcamp, you will have a chance to add your name to the [bootcamp wall of fame](WALL_OF_FAME.md).
