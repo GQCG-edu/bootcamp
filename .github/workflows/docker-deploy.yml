@@ -14,7 +14,7 @@ jobs:
         os: [ubuntu-latest]
     steps:
     - uses: actions/checkout@v2
-    - name: Build and push the Docker image
+    - name: Build and deploy Docker image
       uses:  docker/build-push-action@v1
       with:
         repository: gqcg/bootcamp
