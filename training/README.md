@@ -1,7 +1,7 @@
 
 # Training
 
-In this training we will first focussing on acquiring high-level skills using freely available resources that run in your browser (Software as a Service). After you have obtained these skills, we will break free from the confines of this resources and transition to a much more powerful Platform as a Service. At the end of this training, you will be able run scientific simulations on highly powerful supercomputers.
+In this training we will first focussing on acquiring high-level skills using freely available resources that run in your browser (Software as a Service). After you have obtained these skills, we will break free from the confines of this resources and transition to a much more powerful Platform as a Service. At the end of this training, you will be able to run scientific simulations on highly powerful supercomputers.
 
 ## Software as a Service
 
@@ -27,7 +27,7 @@ Google Colab allows you to write and execute Python in your browser. The followi
 
 The best way to learn scientific Python is to look at the courses offered on [DataCamp](https://www.datacamp.com) for interactive tutorials. You can get three months of free access if you get the [Github Education Pack](https://education.github.com/pack). The [SciPy Lectures](http://www.scipy-lectures.org) provide an overview of what you will learn.
 
-> Assignment: open an issue in the `bootcamp` repo with a title `$username: Python Colab progress` in which you upload a iPython notebook in which you 
+> Assignment: open an issue in the `bootcamp` repo with a title `$username: Python Colab progress` in which you upload a iPython notebook in which you:
 > - try to diagonalize a random 40 by 40 matrix and a random symmetric 40 by 40 matrix. 
 > - reproduce the following image:
 > <p align="center">
@@ -58,7 +58,6 @@ Git is a state-of-the-art version control system and using Git with [Github](htt
 
 - Install Docker
 - VSCode extension
-- Run jupyter notebook in VSCode
 
 ### Enhanced scientific communication with LaTeX workshop
 
@@ -74,7 +73,5 @@ You can run a local [Jupyter notebook](https://jupyter.org/) by starting your ow
 ```
 
 ### Scaling up your research with remote development and the UGent HPC
-
-
 
 
