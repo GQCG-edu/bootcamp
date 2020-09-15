@@ -1,0 +1,26 @@
+name: Docker deploy
+on:
+  push:
+    paths:
+      - 'Dockerfile'
+    branches:
+      - 'master'
+
+jobs:
+  build-and-deploy:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest]
+    steps:
+    - uses: actions/checkout@v2
+    - name: Build and deploy Docker image
+      uses:  docker/build-push-action@v1
+      with:
+        repository: gqcg/bootcamp
+        tags: latest
+        registry: docker.io
+        dockerfile: Dockerfile
+        username: ${{ secrets.DOCKER_USERNAME }}
+        password: ${{ secrets.DOCKER_PASSWORD }}
+    
