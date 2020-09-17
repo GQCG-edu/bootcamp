@@ -76,4 +76,4 @@ In a similar way, you can install the `LaTeX Workshop` extension (by James Yu) i
 
 ### Scaling up your research with remote development and the UGent HPC
 
-The main reason why we are using Docker is that Docker can be run on any machine you like and will give exactly the same computational environment and results. As such, you could run your notebooks on the machines hosted by the [UGent HPC](https://www.ugent.be/hpc/en), which offer free access to e.g. machines with 32 cores and 177GB RAM memory. Please contact @dariatols if you interested in using those machines.
+The main reason why we are using Docker is that Docker can be run on any machine you like and will give exactly the same computational environment and results. As such, you could run your notebooks on the machines hosted by the [UGent HPC](https://www.ugent.be/hpc/en), which offer free access to e.g. machines with 32 cores and 177GB RAM memory. Please contact [@dariatols](https://github.com/GQCG-org/GQCG/blob/master/members/daria_tolstykh.md) if you interested in using those machines.
