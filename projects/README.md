@@ -6,9 +6,9 @@
 
 After the training, you can showcase your skills by engaging in the following three projects which are based on those provided by Daniel Crawford's group's [Programming Projects](https://github.com/CrawfordGroup/ProgrammingProjects) <sup>[[1]](#footnote1)</sup>. 
 
-1. [Molecular geometry](molecular-geometry/README.md)
-2. [Harmonic vibrational analysis](harmonic-vibrational-analysis/README.md)
-3. [Restricted Hartree-Fock](restricted-hartree-fock/README.md)
+1. [Molecular geometry](molecular-geometry)
+2. [Harmonic vibrational analysis](harmonic-vibrational-analysis)
+3. [Restricted Hartree-Fock](restricted-hartree-fock)
 
 Use as many of the techniques you have learned as possible. This entails:
 - forking the repo
