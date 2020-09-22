@@ -17,7 +17,7 @@ GitHub is a code hosting platform for version control and collaboration. It lets
 
 ### Scientific communication with LaTeX with Overleaf
 
-LaTeX allows you to easily typeset documents that contain a lot of mathematics. In order to use LaTeX, you first need to study the [structure and syntax of LaTeX documents](https://latex.ugent.be/files/documenten/latex-cursus.pdf). You can write and typeset LaTeX documents in your browser using [Overleaf](https://www.overleaf.com). 
+LaTeX allows you to easily typeset documents that contain a lot of mathematics. In order to use LaTeX, you first need to study the [structure and syntax of LaTeX documents](https://www.overleaf.com/learn/latex/Free_online_introduction_to_LaTeX_(part_1)). You can write and typeset LaTeX documents in your browser using [Overleaf](https://www.overleaf.com). 
 
 > Assignment: open an issue in the `bootcamp` repo with a title `$username: LaTeX progress` (substitute your username in `$username`) in which you upload a *.pdf file that contains your name, the typeset [time-dependent Schrödinger equation](https://en.wikipedia.org/wiki/Schr%C3%B6dinger_equation#Time-dependent_equation) and [an image of Erwin Schrödinger](https://en.wikipedia.org/wiki/Schr%C3%B6dinger_equation#/media/File:Erwin_Schrodinger2.jpg). Mention a team member of GQCG, who will review and close the issue.
 
