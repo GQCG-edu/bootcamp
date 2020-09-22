@@ -17,7 +17,7 @@ GitHub is a code hosting platform for version control and collaboration. It lets
 
 ### Scientific communication with LaTeX with Overleaf
 
-LaTeX allows you to easily typeset documents that contain a lot of mathematics. In order to use LaTeX, you first need to study the [structure and syntax of LaTeX documents](http://latex.ugent.be/cursus.php). You can write and typeset LaTeX documents in your browser using [Overleaf](https://www.overleaf.com). 
+LaTeX allows you to easily typeset documents that contain a lot of mathematics. In order to use LaTeX, you first need to study the [structure and syntax of LaTeX documents](https://www.overleaf.com/learn/latex/Free_online_introduction_to_LaTeX_(part_1)). You can write and typeset LaTeX documents in your browser using [Overleaf](https://www.overleaf.com). 
 
 > Assignment: open an issue in the `bootcamp` repo with a title `$username: LaTeX progress` (substitute your username in `$username`) in which you upload a *.pdf file that contains your name, the typeset [time-dependent Schrödinger equation](https://en.wikipedia.org/wiki/Schr%C3%B6dinger_equation#Time-dependent_equation) and [an image of Erwin Schrödinger](https://en.wikipedia.org/wiki/Schr%C3%B6dinger_equation#/media/File:Erwin_Schrodinger2.jpg). Mention a team member of GQCG, who will review and close the issue.
 
@@ -58,7 +58,7 @@ Git is a state-of-the-art version control system and using Git with [Github](htt
 
 [Docker](https://www.docker.com/) allows us to easily share software and development environments that contain everything you need to finish this bootcamp. After you have [installed Docker](https://www.docker.com/get-started), [play around with Docker](https://www.docker.com/play-with-docker).
 
-VSCode has [excellent support for Docker](https://code.visualstudio.com/docs/remote/containers-tutorial). After installing the `Remote - Containers` extension in VSCode,  open the folder containing the bootcamp in VSCode and save your workspace. Then, use the [command palette](https://code.visualstudio.com/docs/getstarted/userinterface#:~:text=The%20most%20important%20key%20combination,provides%20access%20to%20many%20commands.) to select `Remote-Containers: Open Workspace in Container`. After selecting the workspace, you can choose the option to start from the existing `Dockerfile`. You can check that all commands in the terminal are now routed through Docker. 
+VSCode has [excellent support for Docker](https://code.visualstudio.com/docs/remote/containers-tutorial). After installing the `Remote - Containers` extension in VSCode,  open the folder containing the bootcamp in VSCode and save your workspace. Then, use the [command palette](https://code.visualstudio.com/docs/getstarted/userinterface#:~:text=The%20most%20important%20key%20combination,provides%20access%20to%20many%20commands.) to select `Remote-Containers: Open Workspace in Container`. After selecting the workspace, you can choose the option to start from the existing `Dockerfile`. The first time you open the workspace in a container, a Docker image has to be built which will take quite some time. You can check that all commands in the terminal are now routed through Docker. 
 
 > Assignment: Open an issue in which you add a list of Conda packages installed in the Docker container (`conda list`) and the version of Python you are using (`python --version`). Assign a team member of GQCG, who will review and close the issue.
 
@@ -76,4 +76,4 @@ In a similar way, you can install the `LaTeX Workshop` extension (by James Yu) i
 
 ### Scaling up your research with remote development and the UGent HPC
 
-The main reason why we are using Docker is that Docker can be run on any machine you like and will give exactly the same computational environment and results. As such, you could run your notebooks on the machines hosted by the [UGent HPC](https://www.ugent.be/hpc/en), which offer free access to e.g. machines with 32 cores and 177GB RAM memory. Please contact @dariatols if you interested in using those machines.
+The main reason why we are using Docker is that Docker can be run on any machine you like and will give exactly the same computational environment and results. As such, you could run your notebooks on the machines hosted by the [UGent HPC](https://www.ugent.be/hpc/en), which offer free access to e.g. machines with 32 cores and 177GB RAM memory. Please contact [@dariatols](https://github.com/GQCG-org/GQCG/blob/master/members/daria_tolstykh.md) if you interested in using those machines.
