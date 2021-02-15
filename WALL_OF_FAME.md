@@ -13,4 +13,3 @@ This bootcamp, or a previous version thereof, has been completed by:
 - @aarondc60
 - @johdvos
 - @mfatjano
-- @ruvdrsti
