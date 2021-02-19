@@ -1,5 +1,5 @@
 ## Frequently Encountered Problems (for Windows users)
-**connecting notebooks to the HPC from windows (thanks to @MFatjano)**
+**Connecting notebooks to the HPC from Windows (thanks to @MFatjano).**
 
     module swap cluster/${CHOOSE_CLUSTER}
 
