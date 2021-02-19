@@ -14,6 +14,6 @@
 
 copy 3<sup>rd</sup> link to browser
 
-**cannot perform an interactive login from a non TTY device**
+**Cannot perform an interactive login from a non TTY device.**
 
 use winpty before input command
