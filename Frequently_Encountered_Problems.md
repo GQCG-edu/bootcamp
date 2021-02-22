@@ -1,5 +1,6 @@
 ## Frequently Encountered Problems (for Windows users)
 ### Connecting notebooks to the HPC from Windows (thanks to @MFatjano).
+For a more detailed description view **[connect_hpc_windows.MD](https://github.com/ruvdrsti/bootcamp/edit/contributions/connect_hpc_windows.MD)**
 ```
 module swap cluster/${CHOOSE_CLUSTER}
 
