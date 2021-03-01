@@ -1,7 +1,7 @@
 
 # Training
 
-In this training we will first focussing on acquiring high-level skills using freely available resources that run in your browser (Software as a Service). After you have obtained these skills, we will break free from the confines of this resources and transition to a much more powerful Platform as a Service. At the end of this training, you will be able to run scientific simulations on highly powerful supercomputers.
+In this training we will first focussing on acquiring high-level skills using freely available resources that run in your browser (Software as a Service). After you have obtained these skills, we will break free from the confines of this resources and transition to a much more powerful Platform as a Service. At the end of this training, you will be able to run scientific simulations on highly powerful supercomputers. If you would encounter technical problems, check the [`Frequently_Encountered_Problems.md`](https://github.com/ruvdrsti/bootcamp/blob/contributions/Frequently_Encountered_Problems.md) file, maybe someone else had these problems before and wrote them down here.
 
 ## Software as a Service
 
