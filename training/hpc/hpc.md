@@ -87,4 +87,4 @@ Then, you can go back to the terminal with the Singulairy shell. Copy the third 
 
 ## Cannot perform an interactive login from a non TTY device.
 
-Use `winpty before input command.
+Use `winpty` before input command.

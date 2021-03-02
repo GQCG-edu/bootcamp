@@ -3,7 +3,7 @@
 
 In this training we will first focussing on acquiring high-level skills using freely available resources that run in your browser (Software as a Service). After you have obtained these skills, we will break free from the confines of this resources and transition to a much more powerful Platform as a Service. At the end of this training, you will be able to run scientific simulations on highly powerful supercomputers. 
 
-> If you encounter technical problems, please open an [issue](#managing-your-progress-and-getting-help-with-github) so that you we can document the solution in a PR that resolves that issue.
+> If you encounter technical problems, please open an [issue](#managing-your-progress-and-getting-help-with-github) so that together we can document the solution in a PR that resolves that issue.
 
 ## Software as a Service
 
