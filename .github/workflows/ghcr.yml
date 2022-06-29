@@ -11,7 +11,7 @@ on:
   pull_request:
     paths:
       - 'Dockerfile'
-      - ''.github/workflows/ghcr.yml'
+      - '.github/workflows/ghcr.yml'
 
 env:
   REGISTRY: ghcr.io
