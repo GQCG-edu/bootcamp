@@ -2,6 +2,11 @@
 <img src="../../media/hpc.png" width="400">
 </p>
 
+# Using the HPC-UGent web portal
+
+Connect to the [firewall app](https://firewall.hpc.kuleuven.be/) in a tab of your browser. Then, in another tab, connect to the [HPC-UGent web portal](https://login.hpc.ugent.be/). You can start interactive Jupyter notebooks from the 'Interactive Apps' dropdown.
+
+
 # Connecting to the HPC
 
 It is recommended that you first read the **[instructions for connecting to the infrastructure](http://hpcugent.github.io/vsc_user_docs/pdf/intro-HPC-windows-gent.pdf)**. However, when you try to connect to the HPC via PuTTy or MobaXterm, you could encouter problems later on when you want to set up SSH tunnels for creating notebooks. That is why this document has been created to guide the Windows users. This means that chapter 2 and 3 of the **[instructions](http://hpcugent.github.io/vsc_user_docs/pdf/intro-HPC-windows-gent.pdf)** are covered here.
