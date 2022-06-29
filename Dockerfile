@@ -5,7 +5,7 @@ ARG DEBIAN_FRONTEND=noninteractive
 
 # installing texlive and utils
 RUN apt-get update \
-    && apt-get install -y --no-install-recommends wget pandoc texlive-full biber latexmk make git procps locales curl \
+    && apt-get install -y --no-install-recommends wget pandoc texlive-full biber latexmk make git procps  libssl1.1 locales curl \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* \
     && apt-get autoremove -y

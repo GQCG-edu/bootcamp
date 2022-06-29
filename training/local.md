@@ -25,7 +25,13 @@ VSCode has [excellent support for Docker](https://code.visualstudio.com/docs/rem
 <img src="../media/vscode-container.png" width="350">
 </p>
 
-This will initiate a **one-time** download (approximately 5GB) and can take some time depending on your internet connection. If you have configured VSCode correctly in the steps above, you can run iPython notebooks directly in VSCode. Check this by opening the [introduction to PSI4 notebook](../projects/intro-to-psi4.ipynb) in the `projects` folder in VSCode and running the code cells.
+This will initiate a **one-time** download (approximately 5GB) and can take some time depending on your internet connection. If you have configured VSCode correctly in the steps above, you can run iPython notebooks directly in VSCode. Check this by opening the [introduction to PSI4 notebook](../projects/intro-to-psi4.ipynb) in the `projects` folder in VSCode and running the code cells. 
+
+> Hint: Make sure you are using the kernel `/usr/local/miniconda3/bin/python`.
+>
+> <p align="center">
+> <img src="../media/kernel.png" width="200">
+> </p>
 
 In a similar way, you can now typeset *.tex documents locally. Open the [LaTeX test file](latex/main.tex) and typeset the document using Cmd/Ctrl+Shift+P > `LaTeX Workshop: Build LaTeX project`. You can open the resulting *.pdf in a separate tab (Cmd/Ctrl+Shift+P > `LaTeX Workshop: View LaTeX PDF file.`). Note that you can navigate your LaTeX code from insight your *.pdf by Ctrl/Cmd+clicking on a piece of text in the *.pdf.
 
