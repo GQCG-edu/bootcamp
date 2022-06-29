@@ -1,7 +1,9 @@
 
 # Training
 
-In this training we will first focussing on acquiring high-level skills using freely available resources that run in your browser (Software as a Service). After you have obtained these skills, we will break free from the confines of this resources and transition to a much more powerful Platform as a Service. At the end of this training, you will be able to run scientific simulations on highly powerful supercomputers. If you would encounter technical problems, check the [`Frequently_Encountered_Problems.md`](https://github.com/ruvdrsti/bootcamp/blob/contributions/Frequently_Encountered_Problems.md) file, maybe someone else had these problems before and wrote them down here.
+In this training we will first focussing on acquiring high-level skills using freely available resources that run in your browser (Software as a Service). After you have obtained these skills, we will break free from the confines of this resources and transition to a much more powerful Platform as a Service. At the end of this training, you will be able to run scientific simulations on highly powerful supercomputers. 
+
+> If you encounter technical problems, please open an [issue](#managing-your-progress-and-getting-help-with-github) so that together we can document the solution in a PR that resolves that issue.
 
 ## Software as a Service
 
@@ -58,7 +60,13 @@ Git is a state-of-the-art version control system and using Git with [Github](htt
 
 [Docker](https://www.docker.com/) allows us to easily share software and development environments that contain everything you need to finish this bootcamp. After you have [installed Docker](https://www.docker.com/get-started), [play around with Docker](https://www.docker.com/play-with-docker).
 
-VSCode has [excellent support for Docker](https://code.visualstudio.com/docs/remote/containers-tutorial). After installing the `Remote - Containers` extension in VSCode,  open the folder containing the bootcamp in VSCode and save your workspace. Then, use the [command palette](https://code.visualstudio.com/docs/getstarted/userinterface#:~:text=The%20most%20important%20key%20combination,provides%20access%20to%20many%20commands.) to select `Remote-Containers: Open Workspace in Container`. After selecting the workspace, you can choose the option to start from the existing `Dockerfile`. The first time you open the workspace in a container, a Docker image has to be built which will take quite some time. You can check that all commands in the terminal are now routed through Docker. 
+VSCode has [excellent support for Docker](https://code.visualstudio.com/docs/remote/containers-tutorial). After installing the `Remote - Containers` extension in VSCode,  open the folder containing the bootcamp in VSCode. You should get the option to open the folder in a custom Docker container.
+
+<p align="center">
+<img src="../media/vscode-container.png" width="350">
+</p>
+
+This will initiate a **one-time** download (approximately 5GB) and can take some time depending on your internet connection. After your Docker container has booted, you can check that all commands in the terminal are now routed through Docker. 
 
 > Assignment: Open an issue in which you add a list of Conda packages installed in the Docker container (`conda list`) and the version of Python you are using (`python --version`). Assign a team member of GQCG, who will review and close the issue.
 
@@ -76,4 +84,6 @@ In a similar way, you can install the `LaTeX Workshop` extension (by James Yu) i
 
 ### Scaling up your research with remote development and the UGent HPC
 
-The main reason why we are using Docker is that Docker can be run on any machine you like and will give exactly the same computational environment and results. As such, you could run your notebooks on the machines hosted by the [UGent HPC](https://www.ugent.be/hpc/en), which offer free access to e.g. machines with 32 cores and 177GB RAM memory. Please contact [@dariatols](https://github.com/GQCG-org/GQCG/blob/master/members/daria_tolstykh.md) if you interested in using those machines.
+The main reason why we are using Docker is that Docker can be run on any machine you like and will give exactly the same computational environment and results. As such, you could run your notebooks on the machines hosted by the [UGent HPC](https://www.ugent.be/hpc/en), which offer free access to e.g. machines with 32 cores and 177GB RAM memory. 
+
+> Assignment: Make sure you can run a Jupyter Notebook on the UGent HPC by following the [provided instructions](hpc/hpc.md).

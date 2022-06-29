@@ -3,11 +3,10 @@
 {
 	"name": "Existing Dockerfile",
 
+	"image": "gqcg/bootcamp:latest",
+
 	// Sets the run context to one level up instead of the .devcontainer folder.
 	"context": "..",
-
-	// Update the 'dockerFile' property if you aren't using the standard 'Dockerfile' filename.
-	"dockerFile": "../Dockerfile",
 
 	// Set *default* container specific settings.json values on container create.
 	"settings": { 
