@@ -25,28 +25,10 @@ VSCode has [excellent support for Docker](https://code.visualstudio.com/docs/rem
 <img src="../media/vscode-container.png" width="350">
 </p>
 
-This will initiate a **one-time** download (approximately 5GB) and can take some time depending on your internet connection. After your Docker container has booted, you can check that all commands in the terminal are now routed through Docker. 
+This will initiate a **one-time** download (approximately 5GB) and can take some time depending on your internet connection. If you have configured VSCode correctly in the steps above, you can run iPython notebooks directly in VSCode. Check this by opening the [introduction to PSI4 notebook](../projects/intro-to-psi4.ipynb) in the `projects` folder in VSCode and running the code cells.
 
-> Assignment: Open an issue in which you add a list of Conda packages installed in the Docker container (`conda list`) and the version of Python you are using (`python --version`). Assign a team member of GQCG, who will review and close the issue.
+In a similar way, you can now typeset *.tex documents locally. Open the [LaTeX test file](latex/main.tex) and typeset the document using Cmd/Ctrl+Shift+P > `LaTeX Workshop: Build LaTeX project`. You can open the resulting *.pdf in a separate tab (Cmd/Ctrl+Shift+P > `LaTeX Workshop: View LaTeX PDF file.`). Note that you can navigate your LaTeX code from insight your *.pdf by Ctrl/Cmd+clicking on a piece of text in the *.pdf.
 
-# Enhanced data science with Python and Jupyter notebooks
+# Collaborating Live: VSCode LiveShare
 
-If you have configured VSCode correctly in the steps above, you can run iPython notebooks directly in VSCode. Check this by opening one of the notebooks in the `projects` folder in VSCode. After VSCode has installed all extensions in the Docker container, you should be able to run the iPython notebooks on your local machine.
-
-> Assignment: Check that you can run [the first notebook of the projects folder](../projects/molecular-geometry/Project1_Molecular_geometry_analysis.ipynb). Note that you are now running this notebook on your local machine and that you have access to all the resources your machine has to offer.
-
-# Enhanced scientific communication with LaTeX workshop
-
-In a similar way, you can install the `LaTeX Workshop` extension (by James Yu) in the Docker container. Through the command palette, you can typeset *.tex documents (`LaTeX Workshop: Build LaTeX project`). You can open the resulting *.pdf in a separate tab (`LaTeX Workshop: View LaTeX PDF file.`).
-
-> Assignment: Make sure you can typeset the [LaTeX test provided](latex/main.tex).
-
-# Capstone project: Hello <G|QC|G>!
-
-Create a repo called `hello-gqcg` in your personal organisation and commit
-* the above iPython notebook
-* the above figure stored as pdf
-* the LaTeX source for a document that contains that figure
-* the typeset pdf document
-
-> Congratulations! You are now able to collaborate with other Github users, generate computational results and report on those results.
+[Live Share](https://code.visualstudio.com/learn/collaboration/live-share) enables you to quickly collaborate with a friend, classmate, or professor on the same code without the need to sync code or to configure the same development tools, settings, or environment.
