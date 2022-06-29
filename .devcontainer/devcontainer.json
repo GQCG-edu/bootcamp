@@ -1,9 +1,9 @@
 // For format details, see https://aka.ms/vscode-remote/devcontainer.json or this file's README at:
 // https://github.com/microsoft/vscode-dev-containers/tree/v0.134.1/containers/docker-existing-dockerfile
 {
-	"name": "Existing Dockerfile",
+	"name": "bootcamp",
 
-	"image": "gqcg/bootcamp:latest",
+	"image": "ghcr.io/gqcg-edu/bootcamp:master",
 
 	// Sets the run context to one level up instead of the .devcontainer folder.
 	"context": "..",
@@ -18,7 +18,9 @@
 	"extensions": [
 		"james-yu.latex-workshop",
 		"ms-python.python",
-		"ms-vscode.vscode-typescript-tslint-plugin"
+		"ms-vscode.vscode-typescript-tslint-plugin",
+		"ms-toolsai.jupyter",
+		"ms-vsliveshare.vsliveshare",
 	]
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
