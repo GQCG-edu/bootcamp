@@ -6,12 +6,12 @@ on:
     branches: 
       - 'master'
     paths:
-      - Dockerfile
-      - .github/workflows/ghcr.yml
+      - 'Dockerfile'
+      - '.github/workflows/ghcr.yml'
   pull_request:
     paths:
-      - Dockerfile
-      - .github/workflows/ghcr.yml
+      - 'Dockerfile'
+      - ''.github/workflows/ghcr.yml'
 
 env:
   REGISTRY: ghcr.io
