@@ -1,11 +1,11 @@
-FROM ubuntu:22.04
+FROM ubuntu:20.04
 
 # non interactive frontend for locales
 ARG DEBIAN_FRONTEND=noninteractive
 
 # installing texlive and utils
 RUN apt-get update \
-    && apt-get install -y --no-install-recommends wget pandoc texlive-full biber latexmk make git procps  libssl1.1 locales curl openssh-client \
+    && apt-get install -y --no-install-recommends wget pandoc texlive-full biber latexmk make git procps  locales curl openssh-client \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* \
     && apt-get autoremove -y
