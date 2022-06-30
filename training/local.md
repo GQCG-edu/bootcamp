@@ -13,7 +13,11 @@
 
 The [VSCode editor](https://code.visualstudio.com/) is a highly powerful and customizable cross-platform editor. After you have [gotten started](https://code.visualstudio.com/docs), take a look at the so-called `terminal`. This [terminal](https://swcarpentry.github.io/shell-novice) gives you more power to do more tasks more quickly with your computer. VSCode also has [builtin Git support](https://code.visualstudio.com/docs/introvideos/versioncontrol).
 
-> Assignment: Open the local copy of your fork with VSCode. **Inside VSCode**, commit a new field `vscode.md` with contents 'Hello, VSCode!' to the master branch of your fork.
+> Assignment: Open the local copy of your fork with VSCode. **Inside VSCode**, commit a new field `vscode.md` with contents 'Hello, VSCode!' to the master branch of your fork. Note that VSCode has a built-in Preview for markdown documents
+> 
+> <p align="center">
+> <img src="../media/preview.png" width="200">
+> </p>
 
 # Installing software with Docker containers
 
