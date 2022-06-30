@@ -9,7 +9,7 @@ Stage: build
 %post
     export DEBIAN_FRONTEND=noninteractive
     apt-get update 
-    apt-get install -y wget pandoc texlive-full biber latexmk make git procps locales curl openssh-client
+    apt-get install -y build-essential wget pandoc texlive-full biber latexmk make git procps locales curl openssh-client
     apt-get clean 
     apt-get autoremove -y
 
@@ -22,7 +22,7 @@ Stage: build
     conda --version
 
     conda install -c conda-forge numpy scipy matplotlib ipython jupyter pandas sympy nose h5py scikit-learn sympy
-    conda install -c psi4 psi4=1.5
+    conda install -c psi4 psi4=1.4.1
 
     NOW=`date`
     echo "export NOW=\"${NOW}\"" >> $SINGULARITY_ENVIRONMENT

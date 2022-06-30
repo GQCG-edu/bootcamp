@@ -5,7 +5,7 @@ ARG DEBIAN_FRONTEND=noninteractive
 
 # installing texlive and utils
 RUN apt-get update \
-    && apt-get install -y --no-install-recommends wget pandoc texlive-full biber latexmk make git procps  locales curl openssh-client \
+    && apt-get install -y --no-install-recommends build-essential wget pandoc texlive-full biber latexmk make git procps locales curl openssh-client \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* \
     && apt-get autoremove -y
@@ -29,6 +29,6 @@ RUN wget \
 RUN conda --version
 
 RUN conda install -c conda-forge numpy scipy matplotlib ipython jupyter pandas sympy nose h5py scikit-learn sympy
-RUN conda install -c psi4 psi4=1.5
+RUN conda install -c psi4 psi4=1.4.1
 
 ENTRYPOINT bash
