@@ -22,7 +22,7 @@ Stage: build
     conda --version
 
     conda install -c conda-forge numpy scipy matplotlib ipython jupyter pandas sympy nose h5py scikit-learn sympy
-    conda install -c psi4 psi4
+    conda install -c psi4 psi4=1.5
 
     NOW=`date`
     echo "export NOW=\"${NOW}\"" >> $SINGULARITY_ENVIRONMENT
