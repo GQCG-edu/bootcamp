@@ -13,9 +13,9 @@ Stage: build
     apt-get clean 
     apt-get autoremove -y
 
-    wget https://repo.anaconda.com/miniconda/Miniconda3-py37_4.8.2-Linux-x86_64.sh 
-    bash Miniconda3-py37_4.8.2-Linux-x86_64.sh -p /usr/local/miniconda3 -b
-    rm -f Miniconda3-py37_4.8.2-Linux-x86_64.sh
+    wget https://repo.anaconda.com/miniconda/Miniconda3-py38_4.12.0-Linux-x86_64.sh
+    bash Miniconda3-py38_4.12.0-Linux-x86_64.sh -p /usr/local/miniconda3 -b
+    rm -f Miniconda3-py38_4.12.0-Linux-x86_64.sh
 
     export PATH="/usr/local/miniconda3/bin:${PATH}"
 
