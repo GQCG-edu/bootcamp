@@ -21,8 +21,7 @@ Stage: build
 
     conda --version
 
-    conda install -c conda-forge numpy scipy matplotlib ipython jupyter pandas sympy nose h5py scikit-learn sympy
-    pip install pyscf
+    pip install pyscf numpy scipy matplotlib ipython jupyter pandas sympy h5py scikit-learn
 
     NOW=`date`
     echo "export NOW=\"${NOW}\"" >> $SINGULARITY_ENVIRONMENT

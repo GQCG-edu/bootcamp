@@ -36,19 +36,24 @@ We recommend that you first browse through the [HPC documentation](https://www.u
 
 You connect to the `login nodes` of the HPC, which are **not** intended for **running** calculations, only **starting** them. Go through the sections `How to start background jobs?` and `How to start jobs with user interaction?` in the [HPC documentation](https://www.ugent.be/hpc/en/support/documentation.htm) to learn how to run such jobs.
 
-The preferred way to connect to the HPC is with VS Code as you get **all** the editing capabilities included in VS Code on the HPC. For this, install the **[Remote SSH extension](https://code.visualstudio.com/docs/remote/ssh)** and browse through the documentation.
+The preferred way to connect to the HPC is with VS Code as you get **all** the editing capabilities included in VS Code on the HPC.  **Before** you connect to HPC using VS Code, construct an alias for the VS Code server, as this server will require more space than is available on `$HOME`
+```bash
+cd $HOME
+ln -s $VSC_SCRATCH/.vscode-server .vscode-server
+```
+Then install the **[Remote SSH extension](https://code.visualstudio.com/docs/remote/ssh)** and browse through the documentation. Subsequently, connect to the HPC with VS Code.
 
 # Using Git and Github with the HPC
 
 To authenticate to Github, you should also make a public-private key pair on your HPC account and upload the **public key** to your Github account (via `Settings>SSH and GPG keys` on Github). For this, first generate a public-private key pair on a login node of the HPC:
-    ```bash
-    ssh-keygen -t rsa -b 4096
-    ```
+```bash
+ssh-keygen -t rsa -b 4096
+```
 Then upload the `id_rsa.pub` key to Github. After configuring your Git client on the HPC
-    ```bash
-    git config --global user.name "Your Name"
-    git config --global user.email "youremail@yourdomain.com"
-    ```
+```bash
+git config --global user.name "Your Name"
+git config --global user.email "youremail@yourdomain.com"
+```
 you should be able to pull from your own repositories.
 
 # Docker for HPC: Singularity
@@ -85,7 +90,7 @@ qsub -I -l nodes=1:ppn=6
 ```
 Inside the interactive session, you can now run IPython notebooks as follows
 ```bash
-singularity run $VSC_SCRATCH/containers/bootcamp_latest.sif ipython -c "%run ${notebook}.ipynb"
+singularity run $VSC_SCRATCH/containers/bootcamp-sif_master.sif ipython -c "%run ${notebook}.ipynb"
 ```
 Make sure that any output (figures, tables, ...) in those notebooks is stored (as e.g. *.pdf or *.json) and not just rendered in the Jupyter client. In this way you can use the following workflow for development
 1. Edit the Jupyter notebook in VS Code
