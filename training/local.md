@@ -42,3 +42,5 @@ In a similar way, you can now typeset *.tex documents locally. Open the [LaTeX t
 # Collaborating Live: VSCode LiveShare
 
 [Live Share](https://code.visualstudio.com/learn/collaboration/live-share) enables you to quickly collaborate with a friend, classmate, or professor on the same code without the need to sync code or to configure the same development tools, settings, or environment.
+
+> Assignment: Start a Live Share sessions (Ctrl/Cmd+Shift+P > `Live Share: Start Collaboration Session (Share)`) and share that link with a collaborator. Make a document `hello-live-share.md` **on your local system** in which you **seperately** write your names.
