@@ -103,6 +103,12 @@ Once you have developed your code and you want to use it in **production** (e.g.
 * use multi-job submission (see relevant section in [the HPC documentation](https://www.ugent.be/hpc/en/support/documentation.htm))
 * combine the data from that multi-job submission in the subsequent analysis
 
+> Note: Using the bootcamp container, you can even typeset your LaTeX document on the cluster by giving the following command inside the `training/latex` folder
+> ```bash
+> singularity run $VSC_SCRATCH/containers/bootcamp-sif_master.sif latexmk -pdf
+> ```
+> Note that if you want to view this *.pdf inside VS Code, you should install the `vscode-pdf` extension **in the VS Code SSH session**.
+
 # Frequently Encountered Problems
 
 ## Cannot perform an interactive login from a non TTY device.
