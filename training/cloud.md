@@ -87,10 +87,16 @@ Inside the interactive session, you can now run IPython notebooks as follows
 ```bash
 singularity run $VSC_SCRATCH/containers/bootcamp_latest.sif ipython -c "%run ${notebook}.ipynb"
 ```
-Make sure that any output (figures, tables, ...) in those notebooks is stored (as e.g. *.pdf or *.json) and not just rendered in the Jupyter client. In this way you can use the following workflow
+Make sure that any output (figures, tables, ...) in those notebooks is stored (as e.g. *.pdf or *.json) and not just rendered in the Jupyter client. In this way you can use the following workflow for development
 1. Edit the Jupyter notebook in VS Code
 2. Run the notebook with the above command
 3. Go back to step 1.
+
+Once you have developed your code and you want to use it in **production** (e.g. running a thousand calculations), you preferably
+* convert your notebook to a python script
+* make sure that you can pass relevant [command line arguments](https://docs.python.org/3/library/argparse.html) to that script
+* use multi-job submission (see relevant section in [the HPC documentation](https://www.ugent.be/hpc/en/support/documentation.htm))
+* combine the data from that multi-job submission in the subsequent analysis
 
 # Frequently Encountered Problems
 
