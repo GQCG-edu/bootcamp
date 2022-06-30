@@ -1,0 +1,38 @@
+
+name: Singularity image
+
+on:
+  push:
+    branches: 
+      - 'master'
+    paths:
+      - 'Singularity'
+      - '.github/workflows/singularity.yml'
+  pull_request:
+    paths:
+      - 'Singularity'
+      - '.github/workflows/singularity.yml'
+
+env:
+  REGISTRY: ghcr.io
+  IMAGE_NAME: ${{ github.repository }}-sif
+
+jobs:
+  build-and-push-image:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+    container:
+      image: quay.io/singularity/singularity:v3.8.3   
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+      - name: Build container
+        run: |
+          sudo -E singularity build bootcamp.sif
+      - name: Log in to registry and deploy
+        if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/master' }}
+        run: |
+          echo "${{ secrets.GITHUB_TOKEN }}" | singularity remote login -u $ --password-stdin oras://ghcr.io
+          singularity push bootcamp.sif oras://ghcr.io/${{ env.IMAGE_NAME }}:master
