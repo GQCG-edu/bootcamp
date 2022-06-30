@@ -30,7 +30,7 @@ jobs:
         uses: actions/checkout@v3
       - name: Build container
         run: |
-          sudo -E singularity build bootcamp.sif
+          sudo -E singularity build bootcamp.sif Singularity
       - name: Log in to registry and deploy
         if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/master' }}
         run: |
