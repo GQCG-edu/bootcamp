@@ -22,7 +22,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Set up Git repository
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
     - name: Set up Go 1.13
       uses: actions/setup-go@v1
       with:
@@ -53,11 +53,11 @@ jobs:
         ./mconfig -p /usr/local && \
         make -C builddir && \
         sudo make -C builddir install  
-      - name: Build container
-        run: |
-          sudo -E singularity build bootcamp.sif Singularity
-      - name: Log in to registry and deploy
-        if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/master' }}
-        run: |
-          echo "${{ secrets.GITHUB_TOKEN }}" | singularity remote login -u $ --password-stdin oras://ghcr.io
-          singularity push bootcamp.sif oras://ghcr.io/${{ env.IMAGE_NAME }}:master
+    - name: Build container
+      run: |
+        sudo -E singularity build bootcamp.sif Singularity
+    - name: Log in to registry and deploy
+      if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/master' }}
+      run: |
+        echo "${{ secrets.GITHUB_TOKEN }}" | singularity remote login -u $ --password-stdin oras://ghcr.io
+        singularity push bootcamp.sif oras://ghcr.io/${{ env.IMAGE_NAME }}:master
