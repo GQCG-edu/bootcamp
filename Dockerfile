@@ -28,7 +28,7 @@ RUN wget \
     && rm -f Miniconda3-py38_4.12.0-Linux-x86_64.sh
 RUN conda --version
 
-RUN conda install -c conda-forge numpy scipy matplotlib ipython jupyter pandas sympy nose h5py scikit-learn sympy
+RUN conda install -c conda-forge numpy>=1.13,!=1.16,!=1.17 scipy<=1.1.0 matplotlib ipython jupyter pandas sympy nose h5py>=2.7 scikit-learn sympy
 RUN pip install pyscf
 
 ENTRYPOINT bash
