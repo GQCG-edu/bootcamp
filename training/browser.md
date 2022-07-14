@@ -27,3 +27,7 @@ The best way to learn scientific Python is to look at the courses offered on [Da
 > <p align="center">
 > <img src="../media/python-colab.png" width="350">
 > </p>
+
+# Introduction to capstone project
+
+Now that you are able to collaborate through Git/Github, write your report in LaTeX/Overleaf and perform computational research with Python/Colab you can already take a look at the [capstone project](../project/README.md). If you want to run the notebooks in that project, open them in Google Colab.
