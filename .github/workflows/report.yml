@@ -25,7 +25,7 @@ jobs:
         working_directory: report
         latexmk_use_xelatex: true
 
-    - name: Archive outline for develop
+    - name: Archive outline for master
       uses: actions/upload-artifact@v2
       with:
         name: report.pdf

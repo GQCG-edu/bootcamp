@@ -3,7 +3,7 @@
 {
 	"name": "bootcamp",
 
-	"image": "ghcr.io/gqcg-edu/bootcamp/report:master",
+	"image": "ghcr.io/gqcg-edu/bootcamp/project:master",
 
 	// Sets the run context to one level up instead of the .devcontainer folder.
 	"context": "..",
@@ -16,7 +16,9 @@
 
 	// Add the IDs of extensions you want installed when the container is created.
 	"extensions": [
-		"james-yu.latex-workshop",
+		"ms-python.python",
+		"ms-vscode.vscode-typescript-tslint-plugin",
+		"ms-toolsai.jupyter",
 		"ms-vsliveshare.vsliveshare"
 	]
 
