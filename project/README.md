@@ -7,3 +7,5 @@
 > Note: use as many of the techniques you have learned as possible. This entails but is not limited to
 > - writing a final LaTeX report on your implementation in your forked repo
 > - contributing back to the bootcamp by mentioning issues with the current version of the bootcamp (or even writing PRs that resolve them!)
+
+This project is heavily influenced by [Psi4Numpy](https://github.com/psi4/psi4numpy).
