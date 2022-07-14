@@ -23,8 +23,6 @@ jobs:
       with:
         root_file: report.tex
         working_directory: report
-        latexmk_use_xelatex: true
-
     - name: Archive outline for master
       uses: actions/upload-artifact@v2
       with:
