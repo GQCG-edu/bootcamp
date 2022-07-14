@@ -77,9 +77,9 @@
     \RequirePackage{fontspec} % Advanced font selection
 
     %% Adding Arial as the main font and TU Delft Ultralight and Georgia as supplementary fonts
-    \setmainfont{Arial}
-    \setmathsf{Arial}
-    \setmathtt{Arial}
+    \setmainfont{helvet}
+    \setmathsf{helvet}
+    \setmathtt{helvet}
 
     \def\titlestyle{\normalfont} % Customize the regular title style font
     \newfontfamily\largetitlestyle[Path=layout/tudelft/]{TUDelft-UltraLight.ttf}
