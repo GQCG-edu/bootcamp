@@ -8,7 +8,7 @@ Stage: build
 %post
     export DEBIAN_FRONTEND=noninteractive
     apt-get update 
-    apt-get install -y build-essential wget make git procps locales curl openssh-client
+    apt-get install -y build-essential wget make git procps locales curl openssh-client python3-pip
     apt-get clean 
     apt-get autoremove -y
 
