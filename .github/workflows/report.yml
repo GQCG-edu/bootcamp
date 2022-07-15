@@ -28,7 +28,7 @@ jobs:
       with:
         name: report.pdf
         path: report/report.pdf
-      if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/develop' }}
+      if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/master' }}
 
     - name: Archive outline for PR
       uses: actions/upload-artifact@v2
