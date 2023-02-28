@@ -21,9 +21,9 @@ The [VSCode editor](https://code.visualstudio.com/) is a highly powerful and cus
 
 # Installing software with Docker containers
 
-[Docker](https://www.docker.com/) allows us to easily share software and development environments that contain everything you need to finish this bootcamp. After you have [installed Docker](https://www.docker.com/get-started), [play around with Docker](https://www.docker.com/play-with-docker). Note that Windows users first need to install the [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/install).
+[Docker](https://www.docker.com/) allows us to easily share software and development environments that contain everything you need to finish this bootcamp. After you have [installed Docker](https://www.docker.com/get-started), [play around with Docker](https://www.docker.com/play-with-docker). Note that Windows users **first** need to install the [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/install). At the time of writing this, Ubuntu 20.04.5 LTS is known to be more stable than the more recent version. A [specific Ubuntu distro can be specified within the wsl installation process](https://learn.microsoft.com/en-us/windows/wsl/basic-commands#install) or can afterwards be installed from the [Windows store](https://apps.microsoft.com/store/detail/ubuntu-20045-lts/9MTTCL66CPXJ?hl=en-us&gl=us). Windows users are also recommended to enable all listed distros under *Enable integration with additional distros* under Docker Settings -> Resources -> WSL Integration.
 
-VSCode has [excellent support for Docker](https://code.visualstudio.com/docs/remote/containers-tutorial). After installing the `Remote - Containers` extension in VSCode, open the `project` folder in VSCode. You should get the option to open the folder in a custom Docker container.
+VSCode has [excellent support for Docker](https://code.visualstudio.com/docs/remote/containers-tutorial). Install the `Remote - Containers` extension in VSCode (Windows users should install the `Remote Development` extension pack, and revert the `Dev Containers` extension to `v0.266.1` in case of issues with the most recent version). [This tutorial](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository) illustrates the process of cloning a repo. Clone the `bootcamp` repo locally and open the `project` folder in VSCode. You should get the option to open the folder in a custom Docker container.
 
 <p align="center">
 <img src="../media/vscode-container.png" width="350">
@@ -37,7 +37,7 @@ This will initiate a **one-time** download and can take some time depending on y
 > <img src="../media/kernel.png" width="200">
 > </p>
 
-In a similar way, you can now typeset LaTeX documents locally. Open the `report` folder in VSCode reopen the folder in the Devcontainer. You can typeset the `report.tex` file with Cmd/Ctrl+Shift+P > `LaTeX Workshop: Build LaTeX project`. You can open the resulting *.pdf in a separate tab (Cmd/Ctrl+Shift+P > `LaTeX Workshop: View LaTeX PDF file.`). Note that you can navigate your LaTeX code from insight your *.pdf by Ctrl/Cmd+clicking on a piece of text in the *.pdf.
+In a similar way, you can now typeset LaTeX documents locally. Open the `report` folder in VSCode and reopen the folder in the Devcontainer. You can typeset the `report.tex` file with Cmd/Ctrl+Shift+P > `LaTeX Workshop: Build LaTeX project`. You can open the resulting *.pdf in a separate tab (Cmd/Ctrl+Shift+P > `LaTeX Workshop: View LaTeX PDF file.`). Note that you can navigate your LaTeX code from inside your *.pdf by Ctrl/Cmd+clicking on a piece of text in the *.pdf.
 
 # Collaborating Live: VSCode LiveShare
 
