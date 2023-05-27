@@ -3,6 +3,10 @@
 <img src="../media/cloud.png" width="400">
 </p>
 
+# Getting in touch with the terminal
+
+The [terminal](https://swcarpentry.github.io/shell-novice) gives you more power to do more tasks more quickly with your computer by switching the graphical user interface of your computer for commands you can type in the command line. Many of these commands will help you during the following lectures on Git/GitHub.
+
 # Enhanced collaboration with version control and Git
 
 [Git](https://git-scm.com/downloads) is a state-of-the-art version control system and using Git with [Github](https://www.github.com) allows for efficient workflows. To see what Git is all about, check out the [Git lectures](https://swcarpentry.github.io/git-novice). 
@@ -11,7 +15,7 @@
 
 # Getting in command with the VSCode editor
 
-The [VSCode editor](https://code.visualstudio.com/) is a highly powerful and customizable cross-platform editor. After you have [gotten started](https://code.visualstudio.com/docs/getstarted/introvideos), take a look at the so-called `terminal`. This [terminal](https://swcarpentry.github.io/shell-novice) gives you more power to do more tasks more quickly with your computer. VSCode also has [builtin Git support](https://code.visualstudio.com/docs/introvideos/versioncontrol).
+The [VSCode editor](https://code.visualstudio.com/) is a highly powerful and customizable cross-platform editor. VSCode also has [builtin Git support](https://code.visualstudio.com/docs/introvideos/versioncontrol).
 
 > Assignment: Open the local copy of your fork with VSCode. **Inside VSCode**, commit a new field `vscode.md` with contents 'Hello, VSCode!' to the master branch of your fork. Note that VSCode has a built-in Preview for markdown documents
 > 
@@ -21,7 +25,7 @@ The [VSCode editor](https://code.visualstudio.com/) is a highly powerful and cus
 
 # Installing software with Docker containers
 
-[Docker](https://www.docker.com/) allows us to easily share software and development environments that contain everything you need to finish this bootcamp. After you have [installed Docker](https://www.docker.com/get-started), [play around with Docker](https://www.docker.com/play-with-docker). Note that Windows users **first** need to install the [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/install). At the time of writing this, Ubuntu 20.04.5 LTS is known to be more stable than the more recent version. A [specific Ubuntu distro can be specified within the wsl installation process](https://learn.microsoft.com/en-us/windows/wsl/basic-commands#install) or can afterwards be installed from the [Windows store](https://apps.microsoft.com/store/detail/ubuntu-20045-lts/9MTTCL66CPXJ?hl=en-us&gl=us). Windows users are also recommended to enable all listed distros under *Enable integration with additional distros* under Docker Settings -> Resources -> WSL Integration.
+[Docker](https://www.docker.com/) allows us to easily share software and development environments that contain everything you need to finish this bootcamp. After you have installed Docker, [play around with Docker](https://www.docker.com/play-with-docker). Note that Windows users **first** need to install the [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/install). At the time of writing this, Ubuntu 20.04.5 LTS is known to be more stable than the more recent version. A [specific Ubuntu distro can be specified within the wsl installation process](https://learn.microsoft.com/en-us/windows/wsl/basic-commands#install) or can afterwards be installed from the [Windows store](https://apps.microsoft.com/store/detail/ubuntu-20045-lts/9MTTCL66CPXJ?hl=en-us&gl=us). Windows users are also recommended to enable all listed distros under *Enable integration with additional distros* under Docker Settings -> Resources -> WSL Integration.
 
 VSCode has [excellent support for Docker](https://code.visualstudio.com/docs/remote/containers-tutorial). Install the `Remote - Containers` extension in VSCode (Windows users should install the `Remote Development` extension pack, and revert the `Dev Containers` extension to `v0.266.1` in case of issues with the most recent version). [This tutorial](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository) illustrates the process of cloning a repo. Clone the `bootcamp` repo locally and open the `project` folder in VSCode. You should get the option to open the folder in a custom Docker container.
 
