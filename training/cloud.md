@@ -78,7 +78,7 @@ export SINGULARITY_PULLFOLDER=$VSC_SCRATCH/containers
 ```
 After configuring Singularity, you can pull (and automatically convert) the bootcamp Singularity image 
 ```bash
-singularity pull oras://ghcr.io/gqcg-edu/bootcamp/project-sif.sif:master
+singularity pull oras://ghcr.io/gqcg-edu/bootcamp/project-sif:master
 ```
 
 ## Using the Singularity image
@@ -88,9 +88,13 @@ Inside VS Code, open a terminal and submit an interactive job
 module swap cluster/skitty
 qsub -I -l nodes=1:ppn=6
 ```
-Inside the interactive session, you can now run IPython notebooks as follows
+Inside the interactive session, you can now run python scripts as follows. Suppose we have a script named ``python_script123.py``, we run
 ```bash
-singularity run $VSC_SCRATCH/containers/bootcamp/project-sif.sif ipython -c "%run ${notebook}.ipynb"
+singularity run $SINGULARITY_PULLFOLDER/project-sif_master.sif python3 python_script123.py
+```
+IPython notebooks can also be run: for a notebook named ``my_ipython_notebook.ipynb``, we run
+```bash
+singularity run $SINGULARITY_PULLFOLDER/project-sif_master.sif ipython -c "%run my_ipython_notebook.ipynb"
 ```
 Make sure that any output (figures, tables, ...) in those notebooks is stored (as e.g. *.pdf or *.json) and not just rendered in the Jupyter client. In this way you can use the following workflow for development
 1. Edit the Jupyter notebook in VS Code
