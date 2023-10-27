@@ -99,7 +99,7 @@ cp /tmp/gqcp_latest.sif $VSC_SCRATCH/containers
 #!/usr/bin/env bash
 #PBS -l nodes=1:ppn=8
 #PBS -l mem=32gb
-#PBS -l walltime=°1:00:00
+#PBS -l walltime=01:00:00
 #PBS -N build_image
 #PBS -o build_image.out
 #PBS -e build_image.err
