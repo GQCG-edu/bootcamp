@@ -33,6 +33,7 @@ We recommend that you first browse through the [HPC documentation](https://www.u
     ```
     ssh -i C:\Users\your_username\.ssh\id_rsa.pub vscxxxxx@login.hpc.ugent.be
     ```
+    
 
 You connect to the `login nodes` of the HPC, which are **not** intended for **running** calculations, only **starting** them. Go through the sections `How to start background jobs?` and `How to start jobs with user interaction?` in the [HPC documentation](https://www.ugent.be/hpc/en/support/documentation.htm) to learn how to run such jobs.
 
@@ -168,3 +169,14 @@ Once you have developed your code and you want to use it in **production** (e.g.
 ## Cannot perform an interactive login from a non TTY device.
 
 Use `winpty` before input command.
+
+## SSH key not recognized when connecting to HPC
+- Ensure that the key location passed is valid. For windows users: if the filepath contains spaces, ensure the key location is passed as a string: `dir\to path  -> "dir\to path"`
+
+- Experiment with passing the file location of your private key instead of your public key as mentioned in [this discussion](https://stackoverflow.com/questions/48328446/id-rsa-pub-file-ssh-error-invalid-format).
+
+- If you get an error message that looks something like
+    ```
+    ssh config line 4: garbage at end of line; "keys\\id_rsa.ppk
+    ```
+    It might be because your key is corrupted or not formatted correctly. Try converting your private key to OpenSSH format using `PuTTYgen`, as explained in [Ras' anwser in this discussion](https://serverfault.com/questions/854208/ssh-suddenly-returning-invalid-format)
