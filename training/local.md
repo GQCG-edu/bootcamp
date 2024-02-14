@@ -11,7 +11,7 @@ The [terminal](https://swcarpentry.github.io/shell-novice) gives you more power 
 
 [Git](https://git-scm.com/downloads) is a state-of-the-art version control system and using Git with [Github](https://www.github.com) allows for efficient workflows. To see what Git is all about, check out the [Git lectures](https://swcarpentry.github.io/git-novice). 
 
-> Assignment: Fork the `bootcamp` repo to your personal account on Github. After installing and configuring Git, pull your personal fork repo to your local machine. Commit a file `hello.md` with contents 'Hello, <G|QC|G>!' to the master branch of your fork.
+> Assignment: Fork the `bootcamp` repo to your personal account on Github. After installing and configuring Git, pull your personal fork repo to your local machine. Commit a file `hello.md` with contents 'Hello, <G|QC|G>!' to the master branch of your fork. Tag your supervisor for review.
 
 # Getting in command with the VSCode editor
 
@@ -22,6 +22,7 @@ The [VSCode editor](https://code.visualstudio.com/) is a highly powerful and cus
 > <p align="center">
 > <img src="../media/preview.png" width="200">
 > </p>
+> Tag your supervisor for review.
 
 # Installing software with Docker containers
 
