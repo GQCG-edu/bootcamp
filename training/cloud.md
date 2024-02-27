@@ -33,6 +33,7 @@ We recommend that you first browse through the [HPC documentation](https://www.u
     ```
     ssh -i C:\Users\your_username\.ssh\id_rsa.pub vscxxxxx@login.hpc.ugent.be
     ```
+    
 
 You connect to the `login nodes` of the HPC, which are **not** intended for **running** calculations, only **starting** them. Go through the sections `How to start background jobs?` and `How to start jobs with user interaction?` in the [HPC documentation](https://www.ugent.be/hpc/en/support/documentation.htm) to learn how to run such jobs.
 
@@ -56,45 +57,101 @@ git config --global user.email "youremail@yourdomain.com"
 ```
 you should be able to pull from your own repositories.
 
-# Docker for HPC: Singularity
+# Docker for HPC: Apptainer (prev. Singularity)
 
-On HPC systems, Docker is not allowed (root access security risk) and we have to use Singularity. As a result, we have to give up some ease of use, but we do get a lot of compute instead. 
+On HPC systems, Docker is not allowed (root access security risk) and we have to use Apptainer, previously known as Singularity. As a result, we have to give up some ease of use, but we do get a lot of compute instead. 
 
 ## First time configuration
 
 > Note: You should follow the instructions below **only once** as then your HPC environment is configured for using Singularity.
 
-To store the Singularity containers, we first create the relevant directories
+Following the [HPC docs](https://docs.hpc.ugent.be/Linux/apptainer/). Submit an interactive session to the [debug cluster](https://docs.hpc.ugent.be/Linux/interactive_debug/), e.g.
+
 ```bash
-mkdir $VSC_SCRATCH/containers
-mkdir $VSC_SCRATCH/containers/cache
-mkdir $VSC_SCRATCH/containers/tmp
-```
-and point the Singularity installation to those directories by adding the following lines to our `.bashrc`
-```bash
-export SINGULARITY_CACHEDIR=$VSC_SCRATCH/containers/cache 
-export SINGULARITY_TMPDIR=$VSC_SCRATCH/containers/tmp 
-export SINGULARITY_PULLFOLDER=$VSC_SCRATCH/containers
-```
-After configuring Singularity, you can pull (and automatically convert) the bootcamp Singularity image 
-```bash
-singularity pull oras://ghcr.io/gqcg-edu/bootcamp/project-sif:master
+module swap cluster/donphan
+qsub -I -l nodes=1:ppn=6 -l mem=24GB
 ```
 
-## Using the Singularity image
+and build the SIF image
+
+- for the bootcamp image:
+```bash
+APPTAINER_CACHEDIR=/tmp/ APPTAINER_TMPDIR=/tmp/ apptainer build --fakeroot /tmp/bootcamp.sif oras://ghcr.io/gqcg-edu/bootcamp/project-sif:master
+```
+- for the latest gqcp image:
+```bash
+APPTAINER_CACHEDIR=/tmp/ APPTAINER_TMPDIR=/tmp/ apptainer build --fakeroot /tmp/gqcp_latest.sif docker://gqcg/gqcp
+```
+
+Copy the resulting SIF to your `$VSC_SCRATCH` or `$VSC_SCRATCH_VO_USER` directories.
+
+```bash
+# if $VSC_SCRATCH/containers does not yet exist
+mkdir $VSC_SCRATCH/containers
+cp /tmp/bootcamp.sif $VSC_SCRATCH/containers
+```
+(and/or)
+```bash
+cp /tmp/gqcp_latest.sif $VSC_SCRATCH/containers
+```
+> Note: if your connection consistently times out before your apptainer build is completed, you can alternatively run the installation in as a job using `qsub build_image.sh`. For example, the `build_image.sh` file should look something like this:
+```shell
+#!/usr/bin/env bash
+#PBS -l nodes=1:ppn=8
+#PBS -l mem=32gb
+#PBS -l walltime=01:00:00
+#PBS -N build_image
+#PBS -o build_image.out
+#PBS -e build_image.err
+#PBS -m abe
+#PBS -M your-email@example.com
+
+# build
+APPTAINER_CACHEDIR=/tmp/ APPTAINER_TMPDIR=/tmp/ apptainer build --fakeroot /tmp/gqcp_latest.sif docker://gqcg/gqcp
+
+# move
+cp /tmp/gqcp_latest.sif $VSC_SCRATCH/containers
+```
+
+
+## Using the Apptainer image
 
 Inside VS Code, open a terminal and submit an interactive job
 ```bash
 module swap cluster/skitty
 qsub -I -l nodes=1:ppn=6
 ```
-Inside the interactive session, you can now run python scripts as follows. Suppose we have a script named ``python_script123.py``, we run
+You can now shell into the image
 ```bash
-singularity run $SINGULARITY_PULLFOLDER/project-sif_master.sif python3 python_script123.py
+apptainer shell $VSC_SCRATCH/containers/my_container.sif
+```
+Now you can simply use the command line as you would normally. For example,
+- running a python file `my_py_file.py`
+```
+python my_py_file.py
+```
+- installing packages onto the image
+```bash
+pip install scipy --user
+```
+>Note: ensure you add the `--user` flag when trying to install packages with pip.
+- Activating an interactive python session
+```bash
+python
+# the python environment is now activated and you may run python code as you would normally
+>>> import numpy as np
+>>> print('Hello world!')
+# exit the python environment with the exit() command
+>>> exit()
+```
+
+Inside the interactive session, you can also run python scripts. Suppose we have a script named ``python_script123.py``, we run
+```bash
+apptainer run $APPTAINER_PULLFOLDER/bootcamp.sif python3 python_script123.py
 ```
 IPython notebooks can also be run: for a notebook named ``my_ipython_notebook.ipynb``, we run
 ```bash
-singularity run $SINGULARITY_PULLFOLDER/project-sif_master.sif ipython -c "%run my_ipython_notebook.ipynb"
+apptainer run $APPTAINER_PULLFOLDER/bootcamp.sif ipython -c "%run my_ipython_notebook.ipynb"
 ```
 Make sure that any output (figures, tables, ...) in those notebooks is stored (as e.g. *.pdf or *.json) and not just rendered in the Jupyter client. In this way you can use the following workflow for development
 1. Edit the Jupyter notebook in VS Code
@@ -112,3 +169,14 @@ Once you have developed your code and you want to use it in **production** (e.g.
 ## Cannot perform an interactive login from a non TTY device.
 
 Use `winpty` before input command.
+
+## SSH key not recognized when connecting to HPC
+- Ensure that the key location passed is valid. For windows users: if the filepath contains spaces, ensure the key location is passed as a string: `dir\to path  -> "dir\to path"`
+
+- Experiment with passing the file location of your private key instead of your public key as mentioned in [this discussion](https://stackoverflow.com/questions/48328446/id-rsa-pub-file-ssh-error-invalid-format).
+
+- If you get an error message that looks something like
+    ```
+    ssh config line 4: garbage at end of line; "keys\\id_rsa.ppk
+    ```
+    It might be because your key is corrupted or not formatted correctly. Try converting your private key to OpenSSH format using `PuTTYgen`, as explained in [Ras' anwser in this discussion](https://serverfault.com/questions/854208/ssh-suddenly-returning-invalid-format)
