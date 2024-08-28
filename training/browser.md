@@ -1,4 +1,3 @@
-
 <p align="center">
 <img src="../media/local.png" width="350">
 </p>
