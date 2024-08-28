@@ -1,4 +1,3 @@
-
 <p align="center">
 <img src="../media/local.png" width="350">
 </p>
@@ -11,7 +10,7 @@ GitHub is a code hosting platform for version control and collaboration. It lets
 
 # Scientific communication with LaTeX and Overleaf
 
-LaTeX allows you to easily typeset documents that contain a lot of mathematics. In order to use LaTeX, you first need to study the [structure and syntax of LaTeX documents](https://www.overleaf.com/learn/latex/Free_online_introduction_to_LaTeX_(part_1)). You can write and typeset LaTeX documents in your browser using [Overleaf](https://www.overleaf.com). LaTeX can also be used as an alternative to using PowerPoint for [creating a presentation](https://www.overleaf.com/learn/latex/Free_online_introduction_to_LaTeX_(part_3)) (make some of the excercises in this document to familiarize yourself).
+LaTeX allows you to easily typeset documents that contain a lot of mathematics. In order to use LaTeX, you first need to study the [structure and syntax of LaTeX documents](https://www.overleaf.com/learn/latex/Free_online_introduction_to_LaTeX_(part_1)). You can write and typeset LaTeX documents in your browser using [Overleaf](https://www.overleaf.com).
 
 > Assignment: typeset the [time-dependent Schrödinger equation](https://en.wikipedia.org/wiki/Schr%C3%B6dinger_equation#Time-dependent_equation) and add [an image of Erwin Schrödinger](https://en.wikipedia.org/wiki/Schr%C3%B6dinger_equation#/media/File:Erwin_Schrodinger2.jpg) in a document on Overleaf. Add the typeset document to an issue and assign your supervisor to review.
 
